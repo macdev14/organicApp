@@ -12,13 +12,12 @@ const TopoLista = (propsin: {titulo: string | undefined}) => (
   </>
 );
 export default function Produtores() {
-  // const [titulo, setTitulo] = useState<String>();
-  // const [lista, setLista] = useState<Lista[]>();
   const [produtores, setProdutores] = useState<produtor>();
   useEffect(() => {
     const retorno = carregaProdutores();
-    // setTitulo(retorno.titulo);
-    // setLista(retorno.lista);
+    retorno.lista.sort(
+      (produtor1, produtor2) => produtor1.distancia - produtor2.distancia,
+    );
     setProdutores(retorno);
   }, []);
 

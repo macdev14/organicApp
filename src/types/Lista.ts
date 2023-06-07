@@ -3,7 +3,7 @@ import {ImageSourcePropType} from 'react-native/types';
 interface ILista {
   nome: string;
   imagem: ImageSourcePropType;
-  distancia: string;
+  distancia: number;
   estrelas: number;
 }
 
